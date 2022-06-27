@@ -1,0 +1,22 @@
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js");
+
+if (workbox) {
+    console.log(`Yay! Workbox is loaded 🎉`);
+  } else {
+    console.log(`Boo! Workbox didn't load 😬`);
+  }
+
+workbox.core.setCacheNameDetails({
+  prefix: 'iEdge'
+});
+
+
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+
+
+
+
+//workbox.routing.registerRoute(
+//    new RegExp('.*/.*'),
+//    workbox.strategies.networkFirst()
+//);
